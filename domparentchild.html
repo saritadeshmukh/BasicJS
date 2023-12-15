@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Element</title>
+</head>
+<body>
+   <div class="parent">                 <!-- NODE -1 -->
+ <div class="day">Monday</div>          <!--  NODE -div-1 and text -1 -->
+    <div class="day">Tuesday</div>          <!--  NODE -div-1 and text -1 -->
+    <div class="day">Wednesday</div>       <!--   NODE -div-1 and text -1 -->
+    <div class="day">Thursday</div>       <!--  NODE -div-1 and text -1 -->
+    <div class="day">Friday</div>         <!-- NODE -div-1 and text -1 -->
+</div>                                    <!--  total node 11 -->
+</body>
+<script>
+    const parent =document.querySelector('.parent');
+    // console.log(parent);
+        
+//     console.log(parent.children[1])                      //it show the children element
+// //    console.log(parent.children[3].innerHTML);           //it showa children element value
+
+//     for(i=0;i<parent.children.length;i++){
+
+// //     console.log(parent.children[i]);                 //it prints children elements
+//        console.log(parent.children[i].innerHTML);             //it prints value of childrens
+
+//    }
+    
+      parent.children[1].style.color="orange";          //can give style to childrens
+      
+    //   console.log(parent.firstElementchild);
+    //   console.log(parent.lastElementchild);
+      
+
+    // const dayOne =document.querySelector('.day');   //to print childrens
+    // console.log(dayOne);
+    // console.log(dayOne.parentElement);                 
+    // console.log(dayOne.nextSibling);
+
+    console.log("NODE:" , parent.childNodes.length);
+    //console.log("NODE:" , parent.children.length);
+   
+
+
+
+
+   //const  arr= Array.parent.children;
+    
+//    array.forEach( function(arr) {
+//     console.log(arr);
+    
+//    });
+    
+</script>
+</html>

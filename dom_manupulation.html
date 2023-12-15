@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM manupulation</title>
+</head>
+<body>
+    <ul class="language">
+        <li>Javascript</li>           
+       
+    </ul>
+</body>
+<script>
+    //--------------------------------------------------------------------------------------
+    //create function to add language
+    // function addLanguage(landName){
+    //    const list= document.createElement('li')           //create list element
+    //    list.innerHTML= `${landName}`                       //to avoid this approce of innerHTML as it travels whole dom tree
+                                                              // to create html content or dispaly on page
+    //    document.querySelector(".language").appendChild(list)      //appened child element list to dom
+    // }
+    
+    // //use the function here
+    // addLanguage('Python');
+   //addLanguage('dot net');
+
+//.........................optimize way to append dom element.........
+
+    function addoptiLanguage(landName){
+        const list= document.createElement('li')   
+        list.appendChild(document.createTextNode(landName))   //its good approach to append separate childNODE only
+        document.querySelector(".language").appendChild(list)
+    }
+    addoptiLanguage('Python')
+    addoptiLanguage('dot net')
+
+    //----------------------dom manupulation-------------------------------
+
+    const secondLang =document.querySelector("li:nth-child(2)")  //select nth child which are available in DOm tree
+    secondLang.innerHTML= "C++"                //here second language python change to C++//again it travels whole tree and then find second element and then only edit se
+     
+
+                //-------------second way of manupulation by replacing....
+    const newLi = document.createElement('li');
+    newLi.textContent= "Mojo";
+    secondLang.replaceWith(newLi);
+
+    ///-------anather way----
+    const firstLanguage = document.querySelector("li:first-child");
+    firstLanguage.outerHTML = `<li>Reactjs</li>`
+
+    //-----REMOVE DOM element........................
+
+    const lastLanguage =document.querySelector("li:first-child")
+    lastLanguage.remove();
+
+
+
+
+
+
+          
+</script>
+</html>
