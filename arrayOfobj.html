@@ -1,0 +1,50 @@
+const person= [
+                   {
+                        name:"xyz",
+                        age:28
+                        },
+
+                   {
+                        name:"abc",
+                        age:20
+                        },
+
+                   {
+                        name:"pqr",
+                        age:30
+                        }
+                 ]
+                
+       
+//[] notation 
+//console.log(person[1]);
+
+//. notaion
+//console.log(person[1].name);
+
+
+//for..in loop
+
+for (var item in person){
+    console.log("for-in----",item);
+ }
+
+//for Each
+
+person.forEach((item)=>{
+    console.log("for Each---",item)});
+
+//Map()
+person.map((item)=>{
+   console.log("map---",item)
+
+   })
+
+   //filter()
+
+   const aaa= person.filter((item)=>{
+    return item.name==="xyz"; 
+   })
+   console.log("filter---",aaa)
+           
+
